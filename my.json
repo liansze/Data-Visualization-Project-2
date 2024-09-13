@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": " 5G Coverage in Malaysia" },
+    "width": 800,
+    "height": 400,
+    "projection": {"type": "equalEarth"},
+    "data": {
+        "url": "mytopo.json",
+        "format": {"type": "topojson", "feature": "my"}
+    },
+    "transform": [
+        {
+        "lookup": "properties.name",
+        "from": {
+            "data": {
+                "url": "data/Mobile_Broadband_Coverage_By_State.csv"
+            },
+            "key": "State",
+            "fields": ["5G Coverage"]
+        }
+        }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+        "color": {
+            "field": "5G Coverage",
+            "type": "quantitative",
+            "scale": {
+                "type": "threshold",
+                "domain": [60, 65, 70, 75, 80, 85, 90],
+                "scheme":"blues"
+            },
+            "legend": {
+                "title": "5G Coverage (%)",
+                "orient":"right"
+            }
+        },
+        "tooltip": [
+            {"field": "properties.name", "type": "nominal", "title":"State"},
+            {"field": "5G Coverage", "type": "quantitative", "title":"5G Coverage (%)"}
+        ]
+    }
+}
+
+
