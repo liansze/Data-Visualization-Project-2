@@ -1,0 +1,302 @@
+[
+  {
+    "Year": "2019-10-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 32.8
+  },
+  {
+    "Year": "2019-10-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 123.7
+  },
+  {
+    "Year": "2019-10-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 135.4
+  },
+  {
+    "Year": "2019-10-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 86.3
+  },
+  {
+    "Year": "2020-01-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 33.8
+  },
+  {
+    "Year": "2020-01-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 118.5
+  },
+  {
+    "Year": "2020-01-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 134.2
+  },
+  {
+    "Year": "2020-01-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 87.3
+  },
+  {
+    "Year": "2020-04-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 34.5
+  },
+  {
+    "Year": "2020-04-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 116.7
+  },
+  {
+    "Year": "2020-04-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 132.8
+  },
+  {
+    "Year": "2020-04-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 87.6
+  },
+  {
+    "Year": "2020-07-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 35.6
+  },
+  {
+    "Year": "2020-07-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 117.4
+  },
+  {
+    "Year": "2020-07-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 132.8
+  },
+  {
+    "Year": "2020-07-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 88.1
+  },
+  {
+    "Year": "2020-10-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 37.2
+  },
+  {
+    "Year": "2020-10-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 118.7
+  },
+  {
+    "Year": "2020-10-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 133.6
+  },
+  {
+    "Year": "2020-10-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 89
+  },
+  {
+    "Year": "2021-01-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 39
+  },
+  {
+    "Year": "2021-01-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 120.1
+  },
+  {
+    "Year": "2021-01-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 135.7
+  },
+  {
+    "Year": "2021-01-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 82.6
+  },
+  {
+    "Year": "2021-04-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 41
+  },
+  {
+    "Year": "2021-04-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 124.2
+  },
+  {
+    "Year": "2021-04-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 139.8
+  },
+  {
+    "Year": "2021-04-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 82.6
+  },
+  {
+    "Year": "2021-07-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 39.9
+  },
+  {
+    "Year": "2021-07-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 127.4
+  },
+  {
+    "Year": "2021-07-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 142.1
+  },
+  {
+    "Year": "2021-07-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 82.2
+  },
+  {
+    "Year": "2021-10-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 40.8
+  },
+  {
+    "Year": "2021-10-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 126.4
+  },
+  {
+    "Year": "2021-10-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 144
+  },
+  {
+    "Year": "2021-10-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 80.1
+  },
+  {
+    "Year": "2022-01-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 42.9
+  },
+  {
+    "Year": "2022-01-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 124.1
+  },
+  {
+    "Year": "2022-01-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 139.2
+  },
+  {
+    "Year": "2022-01-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 78.4
+  },
+  {
+    "Year": "2022-04-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 45.3
+  },
+  {
+    "Year": "2022-04-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 127.9
+  },
+  {
+    "Year": "2022-04-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 143.1
+  },
+  {
+    "Year": "2022-04-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 82.6
+  },
+  {
+    "Year": "2022-07-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 46.4
+  },
+  {
+    "Year": "2022-07-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 128.9
+  },
+  {
+    "Year": "2022-07-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 143.7
+  },
+  {
+    "Year": "2022-07-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 81.4
+  },
+  {
+    "Year": "2022-10-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 47.6
+  },
+  {
+    "Year": "2022-10-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 131
+  },
+  {
+    "Year": "2022-10-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 145.3
+  },
+  {
+    "Year": "2022-10-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 80.6
+  },
+  {
+    "Year": "2023-01-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 48.6
+  },
+  {
+    "Year": "2023-01-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 132
+  },
+  {
+    "Year": "2023-01-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 146.7
+  },
+  {
+    "Year": "2023-01-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 79.6
+  },
+  {
+    "Year": "2023-04-01",
+    "Service Type": "Fixed Broadband per 100 Premises",
+    "Penetration Rate (%)": 49.1
+  },
+  {
+    "Year": "2023-04-01",
+    "Service Type": "Mobile Broadband per 100 Inhabitants",
+    "Penetration Rate (%)": 133.3
+  },
+  {
+    "Year": "2023-04-01",
+    "Service Type": "Mobile Cellular per 100 Inhabitants",
+    "Penetration Rate (%)": 148.1
+  },
+  {
+    "Year": "2023-04-01",
+    "Service Type": "Pay TV per 100 Households",
+    "Penetration Rate (%)": 78.5
+  }
+]

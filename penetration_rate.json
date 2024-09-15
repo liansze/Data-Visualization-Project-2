@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "url": "data/csvjson.json"
+    },
+    "mark": "area",
+    "params": [{
+      "name": "service",
+      "select": {"type": "point", "fields": ["Service Type"]},
+      "bind": "legend"
+    }],
+    "encoding": {
+      "x": {
+        "timeUnit": "yearquarter",
+        "field": "Year",
+        "title": "Year",
+        "axis": {"domain": false, "format": "%b %Y", "tickSize": 0}
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": "Penetration Rate (%)",
+        "type": "quantitative",
+        "axis": null
+      },
+      "color": {
+        "field": "Service Type",
+        "type": "nominal",
+        "scale": {"scheme": "category20b"}
+      },
+      "opacity": {
+        "condition": {"param": "service", "value": 1},
+        "value": 0.2
+      },
+      "tooltip": [
+        {"field": "Year", "title":"Year","timeUnit": "yearquarter", "format":"%b %Y"},
+        {"field": "Service Type", "type": "nominal", "title":"Service Type"},
+        {"field": "Penetration Rate (%)", "type": "quantitative", "title":"Penetration Rate (%)"}
+      ]
+    }
+  }
