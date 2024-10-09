@@ -1,42 +1,83 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 400,
-    "data": {
-      "url": "data/csvjson.json"
-    },
-    "mark": "area",
-    "params": [{
-      "name": "service",
-      "select": {"type": "point", "fields": ["Service Type"]},
-      "bind": "legend"
-    }],
-    "encoding": {
-      "x": {
-        "timeUnit": "yearquarter",
-        "field": "Year",
-        "title": "Year",
-        "axis": {"domain": false, "format": "%b %Y", "tickSize": 0}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 360,
+  "padding": {"top": 9,"left": 20}, 
+  "data": {
+    "url": "data/csvjson.json"
+  },
+  "layer": [   
+    {
+      "mark": {
+        "type": "line",
+        "point": true
       },
-      "y": {
-        "aggregate": "sum",
-        "field": "Penetration Rate (%)",
-        "type": "quantitative",
-        "axis": null
-      },
-      "color": {
-        "field": "Service Type",
-        "type": "nominal",
-        "scale": {"scheme": "category20b"}
-      },
-      "opacity": {
-        "condition": {"param": "service", "value": 1},
-        "value": 0.2
-      },
-      "tooltip": [
-        {"field": "Year", "title":"Year","timeUnit": "yearquarter", "format":"%b %Y"},
-        {"field": "Service Type", "type": "nominal", "title":"Service Type"},
-        {"field": "Penetration Rate (%)", "type": "quantitative", "title":"Penetration Rate (%)"}
-      ]
-    }
-  }
+      "encoding": {
+        "x": {
+          "timeUnit": "yearquarter",
+          "field": "Year",
+          "axis": {"title": "Quarter"}
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "Penetration Rate (%)",
+          "type": "quantitative",
+          "title": "Penetration Rate (%)"
+        },
+        "color": {
+          "field": "Service Type",
+          "type": "nominal",
+          "scale": {"scheme": "set2"}
+        },
+        "strokeWidth": {"value": 10}
+      }
+    }, 
+    {
+      "params": [{
+        "name": "hover",
+        "value": [{"x": {"year": 2018,"quarter": 1}}],
+        "select": {
+          "type": "point",
+          "encodings": ["x"],
+          "on": "mouseover"
+
+        }
+      }],
+      "mark": {
+        "type":"point",
+        "size":3000},
+      "encoding": {
+        "x": {
+          "timeUnit": "yearquarter",
+          "field": "Year"
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "Penetration Rate (%)",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Service Type",
+          "type": "nominal",
+          "scale": {"scheme": "category20b"}
+        },
+        "opacity": {"value": 0},
+        "tooltip": [
+          {"field": "Year", "timeUnit": "yearquarter","title":"Year"},
+          {"field": "Service Type", "type": "nominal", "title":"Service Type"},
+          {"field": "Penetration Rate (%)", "aggregate": "sum","type": "quantitative", "title":"Penetration Rate (%)"}
+        ]
+      }
+    }, 
+    {
+      "transform": [{"filter": {"param": "hover","empty": false}}],
+      "encoding": {
+        "x": {"field": "Year", "timeUnit": "yearquarter"},
+        "color": {"value": "red"}
+      },"mark": {
+          "type": "rule",
+          "strokeWidth": 1.5
+        }
+      }
+  ]
+}

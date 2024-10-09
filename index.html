@@ -6,21 +6,276 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 
     <script src="vega_lite_vis.js"></script>
+    <!-- <style>
+        #vg-tooltip-element {
+            max-width: 180px;
+            max-height: 50px;
+            font-size: 12px;
+        }
+    </style> -->
+    
 
     <title>Malaysia Internet Visualization </title>
 </head>
 
 <body>
-    <h1>Malaysia States</h1>
-    <div id="map">
+    <div class="page">
+        <header>
+            <h1>DIGITAL INFRASTRUCTURE IN MALAYSIA</h1>
+        </header>
+        <div class="container">
+            <div id = "title"> 
+                <h3>Growth of Internet Users in ASEAN Countries (2010-2021)</h3>
+            </div>
+            <div id="text">
+                <p>
+                    * Hover over the countries/bars to highlight item
+                    <br><br>
+                    The choropleth map highlights a significant increase in Internet penetration across ASEAN countries from 2010 to 2021. 
+                    Countries like Singapore, Malaysia, and Brunei show consistently high Internet usage, reaching over 90% of the population by 2021. 
+                    In contrast, nations such as Cambodia, Lao PDR, and Myanmar demonstrate more gradual growth, with Internet usage significantly rising after 2015. 
+                    This variation reflects differing levels of infrastructure development and digital accessibility. 
+                    The data underscores the region's overall trend towards higher digital connectivity, with most countries seeing rapid acceleration in Internet adoption, particularly in the latter half of the decade.
+                    <br><br>
+                </p>
+            </div>  
+            <div id="viz">
+                <div id="viz5">
+                    <div id="asean"></div>
+                    <p style="padding-left: 50;">Source: World Bank Open Data</p>
+                </div>     
+                
+            </div>
+        </div>
+
+        <div class="container">
+            <div id = "title"> 
+                <h3>Service Penetration Rate in Malaysia (2019-2023)</h3>
+            </div>
+            <div id="viz">
+                <div id="viz6">
+                    <div id="viz6-1">
+                        <div id="heatmap"></div>
+                        <p>Source: Malaysian Communications and Multimedia Commission (MCMC)</p>
+                    </div>
+                    <div id="viz6-2">
+                        <div id="text">
+                            <p>
+                                <br><br>
+                                Mobile Cellular services consistently dominate, with penetration rates surpassing 148% by mid-2023, indicating nearly universal access across the population.
+                                <br><br>
+                                Mobile Broadband also shows strong adoption, maintaining rates between 120% and 133%, reflecting a robust reliance on mobile internet services.
+                                <br><br>
+                                 In contrast, Fixed Broadband exhibits steady growth, rising from 32.8% to 49.1%, suggesting improved infrastructure and increasing access to high-speed internet. 
+                                <br><br>
+                                However, Pay TV penetration reveals a concerning decline, dropping from 86.3% to 78.5%, which points to shifting consumer preferences towards digital streaming platforms. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id = "title"> 
+                <h3>Device Usage Distribution Across Malaysian States</h3>
+            </div>
+            <div id="viz">
+                <div id="viz7">
+                    <div id="viz7-1">
+                        <div id="sankey"></div>
+                        <p>Source: Malaysian Communications and Multimedia Commission (MCMC)</p>
+                    </div>
+                    <div id="viz7-2">
+                        <div id="text">
+                            <p>
+                                <br><br>
+                                Across all Malaysian states, there is a notable reliance on mobile phones, with usage rates exceeding 90%, particularly high in Kedah at 99.6%. As we trace the flows of device types, we see that tablet usage varies significantly, peaking in Selangor at 37.3%.
+                                <br><br>
+                                In terms of portable computers, Selangor again stands out with 49.9% usage, indicating higher engagement with this device.  Other portable devices are less frequently used, reflecting minimal engagement across all states.
+                                <br><br>
+                                Overall, the findings highlight that while mobile phones are the primary device of choice, there are notable differences in the adoption of tablets and portable computers, indicating varying levels of digital engagement and opportunities for expanding technology access in certain areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" style="padding-top: 0;">
+            <div id = "title"> 
+                <h3>5G coverage (%) by State in Malaysia</h3>
+            </div>
+            <div id="viz">
+                <div id="viz1">
+                    <div id="map"></div>
+                    <p>Source: Malaysian Communications and Multimedia Commission (MCMC)</p>
+                    <div id="text">
+                        <p>The choropleth map reveals significant regional differences in 5G coverage across Malaysian states. Kuala Lumpur and Putrajaya lead with coverage rates above 97%, followed closely by Selangor and Perlis, both surpassing 90%. States like Pahang, Kelantan, Sarawak, and Sabah exhibit lower coverage, with rates below 70%, highlighting a potential digital divide. Central and western regions generally have better 5G availability, while coverage in the eastern and more rural states remains comparatively lower.</p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id = "title"> 
+                <h3>5G Provider Rankings in Malaysia</h3>
+            </div>
+            <div id="viz">
+                <div id="viz2">
+                    <div id="viz2-1">
+                        <div id="bump"></div>
+                        <p>Source: OpenSignal</p>
+                    </div>
+                    <div id="viz2-2">
+                        <div id="text">
+                            <p>
+                                <br><br>
+                                * Hover over the points/lines to highlight item
+                                <br><br>
+                                The chart compares the performance rankings of five Malaysian mobile network providers across five categories: video experience, games experience, voice app experience, download speed, and upload speed.
+                                <br><br>
+                                Digi outperforms all other providers, consistently ranking 1st in every category. Celcom shows strong performance, particularly in games experience and upload speed, but its ranking drops for voice app experience.
+                                <br><br>
+                                Unifi and Umobile show fluctuating performance, with Umobile performing well in voice app but less so in other categories. Yes ranks consistently last, suggesting it offers the weakest overall service quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright © 2024 <a style="color: white;" href="https://github.com/Jocelyn828">Jocelyn Tan Lian Sze</a>
+                <br>
+                Datesets can be found <a style="color: white;" href="https://github.com/Jocelyn828/FIT3179/tree/main/data">here</a>
+            </p>
+        </footer>
+        
     </div>
-    <div id="area">
-    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["sankey"]});
+      google.charts.setOnLoadCallback(drawChart);
+       function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'State');
+        data.addColumn('string', 'Device Type');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+        ["Negeri Sembilan","Mobile Phone",99.7],
+        ["Negeri Sembilan","Tablet",21.2],
+        ["Negeri Sembilan","Portable Computer",31],
+        ["Negeri Sembilan","Other Portable Devices",1.8],
+        ["Kelantan","Mobile Phone",97.5],
+        ["Kelantan","Tablet",20.8],
+        ["Kelantan","Portable Computer",30.8],
+        ["Kelantan","Other Portable Devices",2.3],
+        ["Kedah","Mobile Phone",99.6],
+        ["Kedah","Tablet",19.8],
+        ["Kedah","Portable Computer",29.5],
+        ["Kedah","Other Portable Devices",5.3],
+        ["Pahang","Mobile Phone",98.6],
+        ["Pahang","Tablet",22.8],
+        ["Pahang","Portable Computer",32],
+        ["Pahang","Other Portable Devices",2.7],
+        ["Terangganu","Mobile Phone",99.4],
+        ["Terangganu","Tablet",28.1],
+        ["Terangganu","Portable Computer",24.2],
+        ["Terangganu","Other Portable Devices",3],
+        ["Sabah","Mobile Phone",99.3],
+        ["Sabah","Tablet",16.5],
+        ["Sabah","Portable Computer",24.8],
+        ["Sabah","Other Portable Devices",10.5],
+        ["Sarawak","Mobile Phone",99.1],
+        ["Sarawak","Tablet",19.1],
+        ["Sarawak","Portable Computer",29.4],
+        ["Sarawak","Other Portable Devices",6.2],
+        ["Melaka","Mobile Phone",98.7],
+        ["Melaka","Tablet",21.5],
+        ["Melaka","Portable Computer",30.7],
+        ["Melaka","Other Portable Devices",5.5],
+        ["Pulau Pinang","Mobile Phone",99.4],
+        ["Pulau Pinang","Tablet",31.8],
+        ["Pulau Pinang","Portable Computer",43.2],
+        ["Pulau Pinang","Other Portable Devices",5.7],
+        ["Johor","Mobile Phone",99.2],
+        ["Johor","Tablet",23.2],
+        ["Johor","Portable Computer",44.6],
+        ["Johor","Other Portable Devices",14.2],
+        ["Perak","Mobile Phone",98.9],
+        ["Perak","Tablet",16.9],
+        ["Perak","Portable Computer",36.5],
+        ["Perak","Other Portable Devices",22.8],
+        ["Perlis","Mobile Phone",91],
+        ["Perlis","Tablet",33.8],
+        ["Perlis","Portable Computer",26.3],
+        ["Perlis","Other Portable Devices",18.4],
+        ["Selangor","Mobile Phone",99.3],
+        ["Selangor","Tablet",37.3],
+        ["Selangor","Portable Computer",49.9],
+        ["Selangor","Other Portable Devices",25.2]
+        ]);
+    
+        var colors = 
+        [
+            "#009B9B",
+            "#007B83",
+            "#005C5C",
+            "#5B8CBA",
+            "#3C4D8D",
+            "#7A4C9C",
+            "#6A2C91",
+            "#9B59B6",
+            "#C9A700",
+            "#FFC107",
+            "#A16B00",
+            "#8A9B00",
+            "#4A4A4A"
+        ];
+
+        var options = {
+          width: 610,
+          height: 500,
+          tooltip: { textStyle: { fontName: 'sans-serif', fontSize: 11 }},
+          sankey: {
+            node: { 
+                colors: colors,
+                label: { 
+                    color: 'white',
+                    bold: true,
+                    fontSize: 13
+                }
+              },
+              link: { colorMode: "source" }
+            }
+        };
+    
+        var chart = new google.visualization.Sankey(document.getElementById('sankey'));
+        chart.draw(data, options);
+       }
+    </script>
 </body>
+
+
 
 </html>

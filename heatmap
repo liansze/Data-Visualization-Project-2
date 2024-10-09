@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 450,
+  "height": 360,
+  "data": {"url": "data/penetration_rate.csv"},
+  "layer": [
+    {
+      "mark": "rect",
+      "params": [{
+        "name": "gridSelect",
+        "select": {"type": "point", 
+                   "on": "mouseover",
+                   "clear": "mouseout"}
+      }],
+      "encoding": {
+        "y": {
+          "field": "Service Type", 
+          "type": "nominal"
+        },
+        "x": {"field": "Year","title":"Quarter"},
+        "fill": {
+          "field": "Penetration Rate (%)", 
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [50,90,130],
+            "scheme":"tealblues"
+          },
+          "legend":{
+            "title":"Penetration Rate (%)",
+            "titleAlign":"center",
+            "titleAnchor":"middle",
+            "orient": "top",
+            "direction": "horizontal"
+          }
+        },
+        "stroke": {
+          "condition": {
+            "param": "gridSelect",
+            "empty": false,
+            "value": "black"
+          },
+          "value": null
+        },
+        "strokeWidth": {
+          "condition": {
+            "param": "gridSelect",
+            "empty": false,
+            "value": 3
+          },
+          "value": 1
+        },
+        "tooltip": [
+          {"field": "Year"},
+          {"field": "Service Type"},
+          {"field": "Penetration Rate (%)", "title": "Penetration Rate (%)"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "color": "white"
+      },
+      "encoding": {
+        "y": {"field": "Service Type", "type": "nominal"},
+        "x": {"field": "Year"},
+        "text": {"field": "Penetration Rate (%)", "type": "quantitative"},
+        "color": {
+          "condition": {
+            "test": "datum['Penetration Rate (%)'] > 90",
+            "value": "white"
+          },
+          "value": "black"
+        }
+      }
+    }
+  ],
+  
+  "config": {
+    "axis": {
+      "grid": true, 
+      "tickBand": "extent"
+    },
+    "background": "#cfe0f2",
+    "padding": 20
+  }
+}

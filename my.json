@@ -1,44 +1,151 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": " 5G Coverage in Malaysia" },
-    "width": 800,
-    "height": 400,
-    "projection": {"type": "equalEarth"},
-    "data": {
-        "url": "mytopo.json",
-        "format": {"type": "topojson", "feature": "my"}
-    },
-    "transform": [
+    "width": "container",
+    "height": 450,
+    "projection": {
+        "type": "equalEarth",
+        "center": [109.4, 4],  
+        "scale": 2800
+      },
+    "layer": [
         {
-        "lookup": "properties.name",
-        "from": {
             "data": {
-                "url": "data/Mobile_Broadband_Coverage_By_State.csv"
+                "url": "data/oceans.topo.json",
+                "format": {"type": "topojson", "feature": "oceans"}
             },
-            "key": "State",
-            "fields": ["5G Coverage"]
-        }
-        }
-    ],
-    "mark": {"type": "geoshape"},
-    "encoding": {
-        "color": {
-            "field": "5G Coverage",
-            "type": "quantitative",
-            "scale": {
-                "type": "threshold",
-                "domain": [60, 65, 70, 75, 80, 85, 90],
-                "scheme":"blues"
+            "mark": {"type": "geoshape", "fill":"aliceblue"}
+        },
+        {
+            "data": {
+                "url": "data/ne_110m_graticules_10.json",
+                "format": {"type": "topojson", "feature": "ne_110m_graticules_10"}
             },
-            "legend": {
-                "title": "5G Coverage (%)",
-                "orient":"right"
+            "mark":{"type": "geoshape", "fill": null, "stroke": "lightgray"}
+        },
+        {
+            "data": {
+                "url": "data/countries.json",
+                "format": {"type": "topojson", "feature": "countries"}
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "#eae8e8",
+                "stroke": "white",
+                "strokeWidth": 1
             }
         },
-        "tooltip": [
-            {"field": "properties.name", "type": "nominal", "title":"State"},
-            {"field": "5G Coverage", "type": "quantitative", "title":"5G Coverage (%)"}
-        ]
+        {
+            "data": {
+                "url": "data/output.json",
+                "format": {"type": "topojson", "feature": "my"}
+            },
+            "transform": [
+                {
+                "lookup": "properties.name",
+                "from": {
+                    "data": {
+                        "url": "data/Mobile_Broadband_Coverage_By_State.csv"
+                    },
+                    "key": "State",
+                    "fields": ["5G Coverage"]
+                }
+                }
+            ],
+            "mark": {"type": "geoshape"},
+            "params": [{
+                "name": "stateSelect",
+                "select": {"type": "point", 
+                        "on": "mouseover",
+                        "clear": "mouseout",
+                        "fields": ["properties.name"]}
+            }],
+            "encoding": {
+                "color": {
+                    "field": "5G Coverage",
+                    "type": "quantitative",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [60, 70, 80, 90],
+                        "scheme":"blues"
+                    },
+                    "legend": {
+                        "title": "5G Coverage (%)",
+                        "orient": "right",
+                        "titleAlign":"center",
+                        "titleAnchor":"middle",
+                        "offset": 10
+                    }
+                },
+                "stroke": {
+                    "condition": {"param": "stateSelect",
+                                "empty": false, 
+                                "value": "black"
+                                },
+                    "value": "black"
+                },
+                "strokeWidth": {
+                    "condition": {"param": "stateSelect",
+                                "empty": false, 
+                                "value": 1.5
+                                },
+                    "value": 0.5
+                },
+                "tooltip": [
+                    {"field": "properties.name", "type": "nominal", "title":"State"},
+                    {"field": "5G Coverage", "type": "quantitative", "title":"5G Coverage (%)"}
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "data/state_lat.csv"
+            },
+            
+            "encoding": {
+              "longitude": {"field": "Longitude", "type": "quantitative"},
+              "latitude": {"field": "Latitude", "type": "quantitative"},
+              "text": {
+                "field": "State", 
+                "type": "nominal"}
+            },
+            "layer": [
+                {
+                    "mark":{"type":"text","fontStyle":"italic"},
+                    "encoding":{
+                        "text": {"value": "WEST MALAYSIA"},
+                        "x":{"value":250},
+                        "y":{"value":260},
+                        "color":{"value":"indianred"}
+                    }
+                },
+                {
+                    "mark":{"type":"text","fontStyle":"italic"},
+                    "encoding":{
+                        "text": {"value": "EAST MALAYSIA"},
+                        "x":{"value":470},
+                        "y":{"value":260},
+                        "color":{"value":"indianred"}
+                    }
+                },
+                {
+                    "data": {
+                        "url": "data/state_lat.csv"
+                    },
+                    "mark": {"type": "text","dy":10,"fontWeight":"bold","fontStyle":"italic","color":"#432109"},
+                    "encoding": {
+                        "longitude": {"field": "Longitude", "type": "quantitative"},
+                        "latitude": {"field": "Latitude", "type": "quantitative"},
+                        "text": {
+                            "field": "State", 
+                            "type": "nominal"
+                        }}
+                }
+            ]
+        }
+    ],
+    "config": {
+      "background": "#cfe0f2",
+      "padding": 20
     }
 }
 

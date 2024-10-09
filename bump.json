@@ -1,0 +1,158 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 570,
+    "height": 350,
+    "data": {"url": "data/carrier_5G.csv"},
+    "encoding": {
+        "x": {
+            "field": "Categories",
+            "type": "nominal",
+            "title": "Categories",
+            "sort": [
+                "Video Experience (0-100 points)",
+                "Voice App Experience (0-100 points)",
+                "Games Experience (0-100 points)",
+                "Download Speed Experience (Mbps)",
+                "Upload Speed Experience (Mbps)"
+            ],
+            "axis": {
+                "labelAngle": 10,
+                "labelPadding": 10, 
+                "grid": false
+            }
+        },
+        "y": {
+            "field": "Rank",
+            "type": "quantitative",
+            "scale": {"domain": [1, 5], "padding":25},
+            "sort": "descending",
+            "axis": {"tickMinStep": 1, "ticks": false},
+            "title": "Rank"
+        }
+    },
+    "layer": [
+        {
+            "params": [
+                {
+                    "name": "lineParam",
+                    "select": {
+                        "type": "point", 
+                        "on": "mouseover",
+                        "clear": "mouseout",
+                        "fields": ["Courier"]
+                    }
+                }
+            ],
+            "mark": {"type": "line"},
+            "encoding": {
+                "tooltip": [
+                    {"field": "Courier"},
+                    {"field": "Categories"},
+                    {"field": "Value"}
+                ],
+                "color": {
+                    "field": "Courier",
+                    "scale": {
+                        "domain": ["Celcom", "Digi", "Yes", "Unifi", "Umobile"],
+                        "range": ["deepskyblue", "#d4ac0d", "deeppink", "orangered", "orange"]
+                    },
+                    "legend": {
+                        "orient": "top",
+                        "title": null,
+                        "direction": "horizontal"
+                    }
+                },
+                "size": {
+                    "condition": [
+                        {
+                            "param": "lineParam", 
+                            "empty": false, 
+                            "value": 6
+                        }
+                    ],
+                    "value": 2
+                },
+                "opacity": {
+                    "condition": [
+                        {
+                            "param": "lineParam",
+                            "value": 1
+                        }
+                    ],
+                    "value": 0.1
+                }
+            }
+        },
+        {
+            "params": [
+                {
+                    "name": "imgParam",
+                    "select": {
+                        "type": "point",
+                        "on": "mouseover",
+                        "clear": "mouseout",
+                        "fields": ["Courier"]
+                    }
+                }
+            ],
+            "mark": {
+                "type": "image",
+                "width": 35,
+                "height": 35  
+            },
+            "encoding": {
+                "tooltip": [
+                    {"field": "Courier"},
+                    {"field": "Categories"},
+                    {"field": "Value"} 
+                ],
+                "x": {
+                    "field": "Categories",
+                    "type": "nominal"
+                },
+                "y": {
+                    "field": "Rank",
+                    "type": "quantitative"
+                },
+                "url": {
+                    "condition": [
+                        {
+                            "test": "datum.Courier === 'Celcom'",
+                            "value": "image/celcom.png"  
+                        },
+                        {
+                            "test": "datum.Courier === 'Digi'",
+                            "value": "image/digi.png"
+                        },
+                        {
+                            "test": "datum.Courier === 'Yes'",
+                            "value": "image/yes.png"
+                        },
+                        {
+                            "test": "datum.Courier === 'Unifi'",
+                            "value": "image/unifi.png"
+                        },
+                        {
+                            "test": "datum.Courier === 'Umobile'",
+                            "value": "image/umobile.png"
+                        }
+                    ],
+                    "value": "image/celcom.png"
+                },
+                "opacity": {
+                    "condition": [
+                        {
+                            "param": "imgParam",
+                            "value": 1
+                        }
+                    ],
+                    "value": 0.1
+                }
+            }
+        }
+    ],
+    "config": {
+      "background": "#cfe0f2",
+      "padding": 20
+    }
+}

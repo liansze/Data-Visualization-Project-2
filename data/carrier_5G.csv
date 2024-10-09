@@ -1,0 +1,26 @@
+Courier,Categories,Rank,Value
+Celcom,Video Experience (0-100 points),3,74.6
+Celcom, Games Experience (0-100 points),2,85.9
+Celcom,Voice App Experience (0-100 points),4,82.7
+Celcom,Download Speed (Mbps),3,294.9
+Celcom,Upload Speed (Mbps),2,42.9
+Digi,Video Experience (0-100 points),1,77.5
+Digi, Games Experience (0-100 points),1,87.7
+Digi,Voice App Experience (0-100 points),1,83.7
+Digi,Download Speed (Mbps),1,440.7
+Digi,Upload Speed (Mbps),1,44.3
+Umobile,Video Experience (0-100 points),4,73.5
+Umobile, Games Experience (0-100 points),3,85.7
+Umobile,Voice App Experience (0-100 points),2,83.3
+Umobile,Download Speed (Mbps),4,251.4
+Umobile,Upload Speed (Mbps),3,42.8
+Unifi,Video Experience (0-100 points),2,74.9
+Unifi, Games Experience (0-100 points),4,84.4
+Unifi,Voice App Experience (0-100 points),3,82.9
+Unifi,Download Speed (Mbps),2,378.1
+Unifi,Upload Speed (Mbps),4,41.4
+Yes,Video Experience (0-100 points),5,73.4
+Yes, Games Experience (0-100 points),5,83.8
+Yes,Voice App Experience (0-100 points),4,82.7
+Yes,Download Speed (Mbps),5,248.6
+Yes,Upload Speed (Mbps),5,33.7

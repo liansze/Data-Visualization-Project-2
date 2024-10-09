@@ -1,0 +1,111 @@
+body {
+    /* font-family: "Poetsen One", cursive, Arial, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: #767272;
+}
+
+.page {
+    width: 1100px;
+    margin: auto;
+    background-color: white;
+}
+
+.container {
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: "#cfe0f2";
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-image: url("../image/rm378-09.jpg");
+    background-position: center;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0;
+}
+
+#title h3{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #cfe0f2;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+#text p{
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    text-align: justify;
+}
+
+#map {
+    width: 100%;
+    max-width: 100%;
+}
+
+#viz2,#viz6,#viz7 {
+    display: flex; /* Use flexbox to align items side by side */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Space items evenly */
+}
+
+#viz2-1,#viz6-1,#viz7-1 {
+    width: 65%;
+}
+
+#viz2-2,#viz6-2,#viz7-2 {
+    width: 30%;
+}
+
+#asean {
+    width: 100%;
+    max-width: 100%;
+}
+
+#sankey {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #cfe0f2;
+}
+
+footer {
+    background-color: #48a9de;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-image: url("../image/rm378-09.jpg");
+    background-position: center;
+    color: white;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1em;
+    font-style: normal;
+    padding-left: 50px;
+    line-height: 2em;
+    text-align: center;
+}
