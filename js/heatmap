@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 450,
-  "height": 360,
+  "width": 385,
+  "height": 330,
   "data": {"url": "data/penetration_rate.csv"},
   "layer": [
     {
@@ -24,7 +24,7 @@
           "scale": {
             "type": "threshold",
             "domain": [50,90,130],
-            "scheme":"tealblues"
+            "scheme": "tealblues"
           },
           "legend":{
             "title":"Penetration Rate (%)",
@@ -62,7 +62,8 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "color": "white"
+        "color": "white",
+        "fontSize":8
       },
       "encoding": {
         "y": {"field": "Service Type", "type": "nominal"},
@@ -84,7 +85,8 @@
       "grid": true, 
       "tickBand": "extent"
     },
-    "background": "#cfe0f2",
-    "padding": 20
+    "background": "#cfe9f2",
+    "padding": 20,
+    "font": "Montserrat"
   }
 }

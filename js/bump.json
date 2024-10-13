@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 570,
-    "height": 350,
+    "width": 620,
+    "height": 320,
     "data": {"url": "data/carrier_5G.csv"},
     "encoding": {
         "x": {
@@ -152,7 +152,8 @@
         }
     ],
     "config": {
-      "background": "#cfe0f2",
-      "padding": 20
+      "background": "#fff",
+      "padding": 20,
+      "font": "Montserrat"
     }
 }

@@ -3,10 +3,10 @@
     "params": [
         {
             "name": "Year_selection",
-            "value": 2021,
+            "value": 2016,
             "bind": {
                 "input": "range",
-                "min": 2010,
+                "min": 2016,
                 "max": 2021,
                 "step": 1,
                 "name": "Year:  "
@@ -61,8 +61,8 @@
     ],
     "hconcat": [
         {
-            "width": 625,
-            "height": 450,
+            "width": 615,
+            "height": 350,
             "projection": {
                 "type": "equirectangular",
                 "center": { "expr": "center_to" },
@@ -138,10 +138,10 @@
                             "type": "quantitative",
                             "scale": {
                                 "type": "threshold",
-                                "domain": [10,30,50,70,90],
-                                "range": ["#ffe6cc", "#ffcc99", "#ffb74d", "#ffa726", "#ff8c00", "#e65100"]
+                                "domain": [30,50,70,90],
+                                "range": ["#ffcc99", "#ffb74d", "#ffa726", "#ff8c00", "#e65100"]
                             },
-                            "legend":{"title":"Internet Users (% of population)","orient": "top"}
+                            "legend":{"title":"Internet Users (% of population)","orient": "top","titleLimit": 200}
                             
                         },
                         "stroke": {
@@ -165,6 +165,7 @@
                             "value": 0.5
                           },
                         "tooltip": [
+                            {"field": "Year"},
                             {"field": "Country", "type": "nominal", "title":"Country"},
                             {"field": "Internet users (% of population)", "type": "quantitative", "title":"Internet users (%)", "format": ".2f"}
                         ]
@@ -174,7 +175,7 @@
                     "data": {
                         "url": "data/asean_lat.csv"
                     },
-                    "mark": {"type": "text","dy":10,"fontWeight":"bold","fontStyle":"italic","color":"#432109"},
+                    "mark": {"type": "text","dy":10, "fontWeight":600,"fontStyle":"italic","color":"#432109", "font":"Montserrat"},
                     "encoding": {
                       "longitude": {"field": "longitude", "type": "quantitative"},
                       "latitude": {"field": "latitude", "type": "quantitative"},
@@ -186,7 +187,7 @@
                         "condition": 
                         [
                             {
-                                "test": "datum['name'] == 'Malaysia' || datum['name'] == 'Singapore' || datum['name'] == 'Brunei' ",
+                                "test": "datum['name'] == 'Malaysia' || datum['name'] == 'Singapore' || datum['name'] == 'Brunei' || datum['name'] == 'Cambodia' ",
                                 "value": 1
                             }
                          ],
@@ -197,18 +198,8 @@
             ]
         },
         {
-            "params": [
-                {
-                    "name": "countryHover",
-                    "select": {
-                        "type": "point", 
-                        "on": "mouseover",
-                        "clear": "mouseout",
-                        "fields": ["Country"]
-                    }
-                }],
-            "width": 275,
-            "height": 450,
+            "width": 258,
+            "height": 350,
             "data": {
                 "url": "data/asean_data.csv"
             },
@@ -219,7 +210,6 @@
                     "as": "InternetUsers"
                 }
             ],
-            "mark": "bar",
             "encoding": {
                 "y": {
                     "field": "Country", 
@@ -233,47 +223,89 @@
                 "x": {
                     "field": "Internet users (% of population)", 
                     "type": "quantitative",
-                    "axis": {"title": "Internet Users (% of population)"}
-                },
-                "color": {
-                    "field": "Internet users (% of population)",
-                    "type": "quantitative",
-                    "scale": {
-                        "type": "threshold",
-                        "domain": [10,30,50,70,90],
-                        "scheme":"darkblue"
+                    "scale": {"domain": [0, 115]},
+                    "axis": {
+                        "title": "Internet Users (% of population)",
+                        "grid": false
+                    },
+                    "stack": null
+                }
+            },
+            "layer":
+            [
+                {
+                    "params": [
+                        {
+                            "name": "countryHover",
+                            "select": {
+                                "type": "point", 
+                                "on": "mouseover",
+                                "clear": "mouseout",
+                                "fields": ["Country"]
+                            }
+                        }
+                    ],
+                    "mark": "bar",
+                    "encoding": {
+                        "y": {
+                            "field": "Country", 
+                            "type": "nominal", 
+                            "axis": {"title": ""},
+                            "sort": {
+                                "field": "InternetUsers", 
+                                "order": "descending"
+                            }
+                        },
+                        "color": {
+                            "field": "Internet users (% of population)",
+                            "type": "quantitative",
+                            "scale": {
+                                "type": "threshold",
+                                "domain": [30,50,70,90]
+                            }
+                        },
+                        "stroke": {
+                        "condition": {"param": "countryHover",
+                                        "empty": false, 
+                                        "value": "black"
+                                        },
+                        "value": "black"
+                        },
+                        "tooltip": [
+                            {"field": "Year"},
+                            {"field": "Country", "type": "nominal", "title":"Country"},
+                            {"field": "Internet users (% of population)", "type": "quantitative", "title":"Internet users (%)", "format": ".2f"}
+                        ],
+                        "strokeWidth": {
+                        "condition": {"param": "countryHover",
+                                        "empty": false, 
+                                        "value": 1.8
+                                        },
+                        "value": 0
+                        },
+                        "opacity": {
+                        "condition": {"param": "countryHover",
+                                        "value": 1
+                                        },
+                        "value": 0.5
+                        }
                     }
-                },
-                
-                "stroke": {
-                  "condition": {"param": "countryHover",
-                                "empty": false, 
-                                "value": "black"
-                                },
-                  "value": "black"
-                },
-                "strokeWidth": {
-                  "condition": {"param": "countryHover",
-                                "empty": false, 
-                                "value": 1.8
-                                },
-                  "value": 0
-                },
-                "opacity": {
-                  "condition": {"param": "countryHover",
-                                "value": 1
-                                },
-                  "value": 0.5
-                },
-                "tooltip": [
-                    {"field": "Country", "type": "nominal", "title":"Country"},
-                    {"field": "Internet users (% of population)", "type": "quantitative", "title":"Internet users (%)", "format": ".2f"}
-                ]
-            }
+                }, 
+                {
+                    "mark": {"type": "text", "align": "left", "dx": 5,"fontStyle":"italic","fontSize":10},
+                    "encoding": {
+                        "text": {
+                            "field": "Internet users (% of population)",
+                            "format": ".2f"
+                        }
+                    }
+                }
+            ]
         }
     ],
     "config": {
-      "background": "#cfe0f2",
-      "padding":20
+      "background": "#fff",
+      "padding":20,
+      "font": "Montserrat"
     }
 }

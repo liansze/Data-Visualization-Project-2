@@ -20,21 +20,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 
     <script src="vega_lite_vis.js"></script>
-    <!-- <style>
-        #vg-tooltip-element {
-            max-width: 180px;
-            max-height: 50px;
-            font-size: 12px;
-        }
-    </style> -->
-    
 
-    <title>Malaysia Internet Visualization </title>
+    <title>Digital Malaysia: How is the Nation Evolving Online?</title>
 </head>
 
 <body>
@@ -43,51 +43,44 @@
             <h1>DIGITAL INFRASTRUCTURE IN MALAYSIA</h1>
         </header>
         <div class="container">
-            <div id = "title"> 
-                <h3>Growth of Internet Users in ASEAN Countries (2010-2021)</h3>
+            <div id="title"> 
+                <h3 style="padding: 0;">How Has Internet Usage Grown Across ASEAN (2016-2021)?</h3>
             </div>
-            <div id="text">
+            <div id="text1">
                 <p>
-                    * Hover over the countries/bars to highlight item
-                    <br><br>
-                    The choropleth map highlights a significant increase in Internet penetration across ASEAN countries from 2010 to 2021. 
-                    Countries like Singapore, Malaysia, and Brunei show consistently high Internet usage, reaching over 90% of the population by 2021. 
-                    In contrast, nations such as Cambodia, Lao PDR, and Myanmar demonstrate more gradual growth, with Internet usage significantly rising after 2015. 
-                    This variation reflects differing levels of infrastructure development and digital accessibility. 
-                    The data underscores the region's overall trend towards higher digital connectivity, with most countries seeing rapid acceleration in Internet adoption, particularly in the latter half of the decade.
+                    From 2016 to 2021, Internet penetration in <b>Malaysia surged, exceeding 90%</b>, placing it among the <b>top three ASEAN nations</b>. Other <br>countries like <b>Singapore</b> and <b>Brunei</b> saw similar trends, while <b>Cambodia</b> and <b>Myanmar lagged behind</b>. The growth gap <br>between <b>higher and lower income nations</b> within ASEAN became more pronounced during this period.
                     <br><br>
                 </p>
             </div>  
             <div id="viz">
                 <div id="viz5">
                     <div id="asean"></div>
-                    <p style="padding-left: 50;">Source: World Bank Open Data</p>
+                    <p>Source: <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?end=2022&start=1990&view=chart" class="hover-underline">World Bank Open Data</a></p>
                 </div>     
-                
             </div>
         </div>
 
-        <div class="container">
-            <div id = "title"> 
-                <h3>Service Penetration Rate in Malaysia (2019-2023)</h3>
-            </div>
+        <div id="title"><h3></h3></div> 
+        <div class="container" style="background-color: #cfe9f2;">
+            <!-- <div id="title"> 
+                <h3>What’s Driving Malaysia’s Service Penetration Rates (2019-2023)?</h3>
+            </div> -->
             <div id="viz">
                 <div id="viz6">
                     <div id="viz6-1">
                         <div id="heatmap"></div>
-                        <p>Source: Malaysian Communications and Multimedia Commission (MCMC)</p>
+                        <p>Source: <a href="https://storage.dosm.gov.my/gdp/digitaleconomy_2022.pdf" class="hover-underline">Department of Statistics, Malaysia</a></p>
                     </div>
                     <div id="viz6-2">
                         <div id="text">
+                            <h2 style="font-size: 26px;">Malaysia's Service Penetration Trends (2019-2023)</h2>
                             <p>
+                                <b>Mobile cellular penetration</b> in Malaysia reached nearly 150% by 2023, <b>reflecting its dominance</b> in the digital services landscape, while <b>mobile broadband grew steadily</b> to 133.3%.
                                 <br><br>
-                                Mobile Cellular services consistently dominate, with penetration rates surpassing 148% by mid-2023, indicating nearly universal access across the population.
+                                <b>Fixed broadband grew slower</b>, increased to 49.1%, suggesting ongoing infrastructure challenges or a preference for mobile services.
                                 <br><br>
-                                Mobile Broadband also shows strong adoption, maintaining rates between 120% and 133%, reflecting a robust reliance on mobile internet services.
-                                <br><br>
-                                 In contrast, Fixed Broadband exhibits steady growth, rising from 32.8% to 49.1%, suggesting improved infrastructure and increasing access to high-speed internet. 
-                                <br><br>
-                                However, Pay TV penetration reveals a concerning decline, dropping from 86.3% to 78.5%, which points to shifting consumer preferences towards digital streaming platforms. 
+                                In cotrast, <b>Pay TV penetrations fell from 86.3% to 78.5%</b>. The decrease may indicate a shift in consumer preferences toward on-demand and online services.
+                            </p>
                             </p>
                         </div>
                     </div>
@@ -96,77 +89,93 @@
         </div>
 
         <div class="container">
-            <div id = "title"> 
-                <h3>Device Usage Distribution Across Malaysian States</h3>
-            </div>
+            <div id="title"><h3></h3></div> 
             <div id="viz">
                 <div id="viz7">
-                    <div id="viz7-1">
-                        <div id="sankey"></div>
-                        <p>Source: Malaysian Communications and Multimedia Commission (MCMC)</p>
-                    </div>
                     <div id="viz7-2">
                         <div id="text">
+                            <h2 style="font-size: 26px;">How Are Malaysians Using Devices Across States?</h2>
                             <p>
+                                Across Malaysian states, <b>mobile phones are the most dominant device</b>, with usage exceeding 90% nationwide. <b>Tablet usage varies</b> by state, peaking in Selangor at 37.3%.
                                 <br><br>
-                                Across all Malaysian states, there is a notable reliance on mobile phones, with usage rates exceeding 90%, particularly high in Kedah at 99.6%. As we trace the flows of device types, we see that tablet usage varies significantly, peaking in Selangor at 37.3%.
+                                In terms of portable computers, <b>Selangor again stands out</b> with usage up 49.9%, showing a <b>higher engagement</b> with this device.
                                 <br><br>
-                                In terms of portable computers, Selangor again stands out with 49.9% usage, indicating higher engagement with this device.  Other portable devices are less frequently used, reflecting minimal engagement across all states.
-                                <br><br>
-                                Overall, the findings highlight that while mobile phones are the primary device of choice, there are notable differences in the adoption of tablets and portable computers, indicating varying levels of digital engagement and opportunities for expanding technology access in certain areas.</p>
+                                <b>Other portable devices</b> are less frequently used, suggesting <b>minimal engagement</b> across all states. This reflects a digital divide in devide accessibility.
+                            </p>
                         </div>
+                    </div>
+                    <div id="viz7-1">
+                        <!-- <h3 style="text-align: center;background-color: #cfe0f2;">Device Usage Distribution Across Malaysian States</h3> -->
+                        <div id="sankey" style="margin-left: -40px;"></div>
+                        <p style="margin-left: -20px;">Source: <a href="https://storage.dosm.gov.my/gdp/digitaleconomy_2022.pdf" class="hover-underline">Department of Statistics, Malaysia</a></p>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="container" style="padding-top: 0;">
-            <div id = "title"> 
-                <h3>5G coverage (%) by State in Malaysia</h3>
+        <div id="title"><h3></h3></div>
+        <div class="container" style="background-color: #cfe0f2;">
+            <div id="title"> 
+                <h3 style="padding: 0%;">Which States Lead in 5G Coverage?</h3>
             </div>
             <div id="viz">
                 <div id="viz1">
                     <div id="map"></div>
-                    <p>Source: Malaysian Communications and Multimedia Commission (MCMC)</p>
-                    <div id="text">
-                        <p>The choropleth map reveals significant regional differences in 5G coverage across Malaysian states. Kuala Lumpur and Putrajaya lead with coverage rates above 97%, followed closely by Selangor and Perlis, both surpassing 90%. States like Pahang, Kelantan, Sarawak, and Sabah exhibit lower coverage, with rates below 70%, highlighting a potential digital divide. Central and western regions generally have better 5G availability, while coverage in the eastern and more rural states remains comparatively lower.</p>
+                    <p>Source: <a href="https://www.mcmc.gov.my/skmmgovmy/media/General/Resources/C-M-2Q-2024_Eng.pdf" class="hover-underline">Malaysian Communications and Multimedia Commission (MCMC)</a></p>
+                    <div id="text1">
+                        <p>
+                            Up to 2024 Q2, <b>Kuala Lumpur</b> and <b>Selangor lead in 5G coverage</b>, boasting over 90% connectivity, while states in <b>East Malaysia</b>, such as
+                            <br>
+                            <b>Sabah</b> and <b>Sarawak</b>, show lower coverage rates. The disparity highlights the <b>differences in infrastructure development</b> and
+                            <br>
+                            access to <b>advanced technology</b> across the country, and the need for greater attention to less connected regions.
+                        </p>
                     </div>     
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div id = "title"> 
-                <h3>5G Provider Rankings in Malaysia</h3>
-            </div>
+            <div id="title"><h3></h3></div>
+            <!-- <div id="title"> 
+                <h3>Who is the Best 5G Provider in Malaysia?</h3>
+            </div> -->
             <div id="viz">
                 <div id="viz2">
                     <div id="viz2-1">
                         <div id="bump"></div>
-                        <p>Source: OpenSignal</p>
+                        <p>
+                            Source: <a href="https://www.opensignal.com/reports/2023/03/malaysia/mobile-network-experience" class="hover-underline">OpenSignal</a>
+                        </p>
                     </div>
                     <div id="viz2-2">
                         <div id="text">
+                            <br>
+                            <h2 style="font-size: 26px;">Who is the Best 5G Provider in Malaysia?</h2>
                             <p>
+                                <b>Digi outperforms all other providers</b>, consistently ranking 1st in every category, while <b>Umobile lags behind</b> in multiple categories. 
                                 <br><br>
-                                * Hover over the points/lines to highlight item
+                                <b>Celcom and Unifi are closing the gap</b>, showing improvements in their overall performance. Meanwhile, <b>Yes offers the weakest</b> overall service quality, ranking lowest in most categories. 
                                 <br><br>
-                                The chart compares the performance rankings of five Malaysian mobile network providers across five categories: video experience, games experience, voice app experience, download speed, and upload speed.
-                                <br><br>
-                                Digi outperforms all other providers, consistently ranking 1st in every category. Celcom shows strong performance, particularly in games experience and upload speed, but its ranking drops for voice app experience.
-                                <br><br>
-                                Unifi and Umobile show fluctuating performance, with Umobile performing well in voice app but less so in other categories. Yes ranks consistently last, suggesting it offers the weakest overall service quality.
+                                
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <footer>
-            <p>Copyright © 2024 <a style="color: white;" href="https://github.com/Jocelyn828">Jocelyn Tan Lian Sze</a>
+        <br><br>
+        <footer style="margin-top: -20px;">
+            <p>
+                Author: <a style="color: white;" href="https://github.com/Jocelyn828" class="hover-underline">Jocelyn Tan Lian Sze</a> ; 13 Oct 2024
                 <br>
-                Datesets can be found <a style="color: white;" href="https://github.com/Jocelyn828/FIT3179/tree/main/data">here</a>
+                - Source: <a style="color: white;" href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?end=2022&start=1990&view=chart" class="hover-underline">The World Bank Group</a> (ASEAN Internet Growth; 2024)
+                <br>
+                - Source: <a style="color: white;" href="https://storage.dosm.gov.my/gdp/digitaleconomy_2022.pdf" class="hover-underline">Department of Statistics, Malaysia</a> (Penetration Rate Comparison, Device Usage Comparison; 29 Nov 2023)
+                <br>
+                - Source: <a style="color: white;" href="https://www.mcmc.gov.my/skmmgovmy/media/General/Resources/C-M-2Q-2024_Eng.pdf" class="hover-underline">Malaysian Communications and Multimedia Commission (MCMC)</a> (5G Coverage; 06 Sept 2024)
+                <br>
+                - Source: <a style="color: white;" href="https://www.opensignal.com/reports/2023/03/malaysia/mobile-network-experience" class="hover-underline">Rupert Bapty</a> (5G Provider Comparison; 30 March 2023)
             </p>
         </footer>
         
@@ -236,34 +245,71 @@
         ["Selangor","Other Portable Devices",25.2]
         ]);
     
+        // var colors = 
+        // [
+        //     "#009B9B",
+        //     "#007B83",
+        //     "#005C5C",
+        //     "#5B8CBA",
+        //     "#3C4D8D",
+        //     "#7A4C9C",
+        //     "#6A2C91",
+        //     "#9B59B6",
+        //     "#C9A700",
+        //     "#FFC107",
+        //     "#A16B00",
+        //     "#8A9B00",
+        //     "#4A4A4A"
+        // ];
+
         var colors = 
-        [
-            "#009B9B",
-            "#007B83",
-            "#005C5C",
-            "#5B8CBA",
-            "#3C4D8D",
-            "#7A4C9C",
-            "#6A2C91",
-            "#9B59B6",
-            "#C9A700",
-            "#FFC107",
-            "#A16B00",
-            "#8A9B00",
-            "#4A4A4A"
-        ];
+            [
+                "#005B8C",
+                "#004A73",
+                "#003A5C",
+                "#5B8CBA",
+                "#3C4D8D",
+                "#7A4C9C",
+                "#6A2C91",
+                "#9B59B6",
+                "#C9A700",
+                "#FFC107",
+                "#A16B00",
+                "#8A9B00",
+                "#4A4A4A"
+            ];
+
+            var colors = 
+[
+    "#0076A8",
+    "#006C96",
+    "#005B8C",
+    "#3DA6D8",
+    "#3C4D8D",
+    "#7A4C9C",
+    "#8A3FA0",
+    "#A05EB5",
+    "#C9A700",
+    "#FFC107",
+    "#A16B00",
+    "#8A9B00",
+    "#4A4A4A"
+];
+
+
 
         var options = {
-          width: 610,
-          height: 500,
+          width: 611,
+          height: 400,
           tooltip: { textStyle: { fontName: 'sans-serif', fontSize: 11 }},
           sankey: {
             node: { 
                 colors: colors,
                 label: { 
-                    color: 'white',
+                    color: '#36454F',
                     bold: true,
-                    fontSize: 13
+                    fontSize: 13,
+                    fontName:"Montserrat"
                 }
               },
               link: { colorMode: "source" }
@@ -273,6 +319,28 @@
         var chart = new google.visualization.Sankey(document.getElementById('sankey'));
         chart.draw(data, options);
        }
+    </script>
+
+    <script type="text/javascript">
+        var vg_1 = "js/my.json";
+        vegaEmbed("#map", vg_1, { "actions": false }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_4 = "js/bump.json";
+        vegaEmbed("#bump", vg_4, { "actions": false }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_4 = "js/asean";
+        vegaEmbed("#asean", vg_4, { "actions": false }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_5 = "js/heatmap";
+        vegaEmbed("#heatmap", vg_5, { "actions": false }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
     </script>
 </body>
 

@@ -11,6 +11,12 @@ body {
     background-color: white;
 }
 
+b{
+    /* font-family: 'Montserrat', sans-serif; */
+    color: #201e1e;
+    font-weight: 700;
+}
+
 .container {
     padding: 10px;
     padding-left: 60px;
@@ -19,6 +25,10 @@ body {
 }
 
 header {
+    /* font-family: "Jaro", sans-serif; */
+    font-family: "Genos", sans-serif;
+    font-weight: 900;
+    font-size: 19px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,11 +47,12 @@ header h1 {
 }
 
 #title h3{
-    font-size: 1.5em;
+    /* font-size: 1.7em; */
+    font-size: 26px;
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #cfe0f2;
+    /* background-color: #cfe0f2; */
 }
 
 p {
@@ -52,12 +63,19 @@ p {
 }
 
 #text p{
-    font-family: "Roboto Slab", serif;
-    font-size: 0.8em;
-    display: flex;
-    justify-content: center;
+    font-family: "Helvetica", sans-serif;
+    /* font-family: "Roboto Slab", serif; */
+    font-size: 0.9em;
     font-style: normal;
     text-align: justify;
+}
+
+#text1 p{
+    font-family: "Helvetica", sans-serif;
+    /* font-family: "Roboto Slab", serif; */
+    font-size: 0.95em;
+    font-style: normal;
+    text-align: center;
 }
 
 #map {
@@ -72,12 +90,25 @@ p {
 }
 
 #viz2-1,#viz6-1,#viz7-1 {
-    width: 65%;
+    width: 63%;
+}
+
+#viz7-1 {
+    width: 60%;
+}
+
+#viz2-1 {
+    width: 80%;
+}
+
+#viz2-2 {
+    width: 20%;
 }
 
 #viz2-2,#viz6-2,#viz7-2 {
-    width: 30%;
+    width: 33%;
 }
+
 
 #asean {
     width: 100%;
@@ -88,7 +119,7 @@ p {
     width: 100%;
     max-width: 100%;
     padding: 20px;
-    background-color: #cfe0f2;
+    height: 375px;
 }
 
 footer {
@@ -99,13 +130,21 @@ footer {
     background-image: url("../image/rm378-09.jpg");
     background-position: center;
     color: white;
-    padding: 20px;
+    padding-bottom: 40px;
 }
 
 footer p {
-    font-size: 1em;
+    font-size: 0.85em;
     font-style: normal;
-    padding-left: 50px;
-    line-height: 2em;
-    text-align: center;
+    line-height: 1.8em;
+    padding-left: 60px;
+}
+
+.hover-underline {
+    text-decoration: none;
+    position: relative;
+}
+
+.hover-underline:hover {
+    text-decoration: underline; 
 }
