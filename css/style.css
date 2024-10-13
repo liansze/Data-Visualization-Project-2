@@ -1,5 +1,4 @@
 body {
-    /* font-family: "Poetsen One", cursive, Arial, sans-serif; */
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     background-color: #767272;
@@ -12,7 +11,6 @@ body {
 }
 
 b{
-    /* font-family: 'Montserrat', sans-serif; */
     color: #201e1e;
     font-weight: 700;
 }
@@ -25,7 +23,6 @@ b{
 }
 
 header {
-    /* font-family: "Jaro", sans-serif; */
     font-family: "Genos", sans-serif;
     font-weight: 900;
     font-size: 19px;
@@ -42,7 +39,6 @@ header {
 
 header h1 {
     font-size: 2.8em;
-/*     font-weight: 700; */
     margin: 0;
 }
 
@@ -52,7 +48,6 @@ header h1 {
     display: flex;
     justify-content: center;
     padding: 10px;
-    /* background-color: #cfe0f2; */
 }
 
 p {
@@ -64,7 +59,6 @@ p {
 
 #text p{
     font-family: "Helvetica", sans-serif;
-    /* font-family: "Roboto Slab", serif; */
     font-size: 0.9em;
     font-style: normal;
     text-align: justify;
@@ -72,7 +66,6 @@ p {
 
 #text1 p{
     font-family: "Helvetica", sans-serif;
-    /* font-family: "Roboto Slab", serif; */
     font-size: 0.95em;
     font-style: normal;
     text-align: center;
@@ -138,6 +131,7 @@ footer p {
     font-style: normal;
     line-height: 1.8em;
     padding-left: 60px;
+    
 }
 
 .hover-underline {
