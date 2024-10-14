@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "width": 975,
     "height": 400,
     "projection": {
         "type": "equalEarth",
@@ -64,10 +64,11 @@
                     },
                     "legend": {
                         "title": "5G Coverage (%)",
-                        "orient": "right",
+                        "orient": "bottom-right",
                         "titleAlign":"center",
                         "titleAnchor":"middle",
-                        "offset": 10
+                        "offset": 10,
+                        "direction": "horizontal" 
                     }
                 },
                 "stroke": {
@@ -116,7 +117,7 @@
                     "mark":{"type":"text","fontStyle":"italic", "fontWeight":500, "font":"Montserrat"},
                     "encoding":{
                         "text": {"value": "WEST MALAYSIA"},
-                        "x":{"value":250},
+                        "x":{"value":300},
                         "y":{"value":250},
                         "color":{"value":"indianred"}
                     }
@@ -125,7 +126,7 @@
                     "mark":{"type":"text","fontStyle":"italic", "fontWeight":500,"font":"Montserrat"},
                     "encoding":{
                         "text": {"value": "EAST MALAYSIA"},
-                        "x":{"value":510},
+                        "x":{"value":565},
                         "y":{"value":250},
                         "color":{"value":"indianred"}
                     }
@@ -147,7 +148,7 @@
                     "mark":{"type":"text","fontSize":13, "fontWeight":500, "font":"Montserrat"},
                     "encoding":{
                         "text": {"value": "5G coverage in Malaysia is high in the urbanized west,"},
-                        "x":{"value":419},
+                        "x":{"value":459},
                         "y":{"value":80},
                         "color":{"value":"black"}
                     }
@@ -156,7 +157,7 @@
                     "mark":{"type":"text","fontSize":13, "fontWeight":500, "font":"Montserrat"},
                     "encoding":{
                         "text": {"value": "moderate in central states, low in the rural east and north"},
-                        "x":{"value":419},
+                        "x":{"value":459},
                         "y":{"value":100},
                         "color":{"value":"black"}
                     }
